@@ -1,0 +1,688 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 500px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/*  */
+/* Header css */
+/*  */
+
+.Header {
+  height: 25px;
+  padding: 5px 20px;
+  background-color: #f7f7f7;
+}
+@media (max-width: 768px) {
+  .Header {
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+.header-container {
+  width: 93vw;
+  height: 25px;
+}
+.header-span {
+  display: inline-block;
+  top: 8px;
+}
+/* Header-left */
+.headerLeft {
+  float: left;
+}
+
+/* Header-right */
+
+.listline {
+  border-right: black solid 1px;
+  line-height: 10px;
+}
+.headerRight {
+  float: right;
+  font-size: 12px;
+}
+.headerList {
+  display: inline-block;
+  list-style: none;
+  padding: 0 8px;
+}
+.headerList a {
+  text-decoration: none;
+  color: #222;
+}
+.headerList a:hover {
+  color: #777;
+}
+
+/*  */
+/* //////////////////Nav-Bar ////////////////*/
+
+.fixedNav {
+  transition: top 0.05s;
+  position: fixed;
+  padding: 0 30px;
+  z-index: 2;
+  background-color: white;
+}
+.NavBar {
+  height: 60px;
+  width: 93.2vw;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+.NavBar div {
+  display: inline-block;
+}
+.navList {
+  display: inline-block;
+}
+.homeLogo {
+  position: relative;
+  float: left;
+  padding: 0;
+  font-size: 30px;
+}
+/* nav middle menu */
+.NavMenu {
+  height: 60px;
+}
+.NavMenu ul {
+  height: 60px;
+}
+.navList {
+  font-size: 17px;
+
+  padding: 18px 13px;
+  margin-right: 3px;
+  border-bottom: 2px transparent solid;
+}
+.navList a {
+  text-decoration: none;
+  color: black;
+  top: 0;
+}
+.navList:hover {
+  border-bottom: 2px black solid;
+}
+/* nav right (search-bar, icons) */
+.navRight {
+  float: right;
+}
+.navIcons {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.mediaIcon {
+  display: none;
+}
+.xIcon {
+  float: right;
+  padding: 5px;
+  padding-right: 20px;
+  font-size: 27px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+.navMouse:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+/* nav - search */
+.searchBar {
+  border-radius: 25px;
+  height: 38px;
+  background-color: #eee;
+  margin: 12px 10px 0;
+}
+.searchInput {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  margin: 0 15px 0 5px;
+  height: 20px;
+  width: 115px;
+  float: inherit;
+  bottom: 11px;
+  transition: width 0.5s;
+  color: grey;
+}
+
+.searchBar:hover {
+  background-color: #ddd;
+}
+.searchInput:hover {
+  background-color: #ddd;
+}
+
+/* ///////ShowSearch */
+
+.ddSearchBox {
+  visibility: hidden;
+  background: white;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.searchInput:focus {
+  outline: none;
+  cursor: text;
+}
+
+.ShowSearch div {
+  display: inline-block;
+}
+
+/*/////////////////////////DDL */
+.DDL {
+  backdrop-filter: blur(2px);
+  transition: 0.3s;
+  overflow: hidden;
+}
+.ddl-container {
+  position: relative;
+  margin: 10px auto 50px;
+}
+.ddl-column {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 15vw;
+}
+.ddl-list {
+  margin-bottom: 20px;
+}
+.ddl-list li a {
+  font-size: 0.9em;
+  color: #777;
+  line-height: 1.6;
+}
+.ddl-list li a:hover {
+  color: #aaa;
+}
+
+@media (max-width: 857px) {
+  /* hidden middle menu */
+  .NavMenu {
+    width: 0;
+    visibility: hidden;
+  }
+  .mediaIcon {
+    display: inline;
+  }
+  .searchBar {
+    display: none;
+    visibility: hidden;
+  }
+  .mediaHidden {
+    width: 0;
+    visibility: hidden;
+  }
+  /* hidden icon and show icon */
+}
+/* //////////Side bar menu */
+/*  side bar menu- main */
+#SideBarMenu {
+  transition: width 0.5s;
+  height: 900px;
+  width: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
+}
+.sideBar-wrapper {
+  transition: 0.3s ease-in-out;
+}
+.sideLayout {
+  width: 220px;
+  margin: 30px;
+  display: inline-block;
+}
+
+.menu-wrapper {
+  /* background-color: yellowgreen; */
+  font-size: 24px;
+  line-height: 2;
+  position: relative;
+  cursor: pointer;
+}
+/* side bar menu - brands */
+.otherBrands {
+  /* background-color: green; */
+  vertical-align: middle;
+  margin: 30px 0;
+}
+.brands {
+  position: relative;
+}
+.side-span {
+  position: absolute;
+  top: 8px;
+  cursor: pointer;
+}
+.sideMenu-icons {
+  padding: 5px;
+}
+/* side bar menu - login */
+.login {
+  /* background-color: goldenrod; */
+  margin: 30px 0;
+}
+.side-login-p {
+  padding: 20px 0;
+  color: #777;
+}
+.side-login-p span {
+  color: black;
+}
+/* side bar menu - bottom */
+.side-bottom {
+  position: relative;
+  /* background-color: skyblue; */
+  padding-bottom: 100px;
+}
+.side-bottom-icon {
+  padding: 5px;
+}
+.relative-wrapper {
+  position: relative;
+}
+/* side menu- second page */
+.allgrey {
+  color: #777;
+  cursor: pointer;
+}
+.second-side {
+  position: absolute;
+  top: 0;
+  left: 280px;
+}
+.side-second-menu {
+  color: #777;
+  line-height: 2;
+  cursor: pointer;
+}
+.side-second-title {
+  color: black;
+  font-size: 24px;
+  padding: 20px 0;
+}
+/* side menu - third page */
+.Third-side {
+  position: absolute;
+  top: 0;
+  left: 560px;
+}
+/* side Menu translate x class */
+.toSecond {
+  transform: translateX(280px);
+}
+
+/* //////////////////////////banner */
+.VideoPlayer {
+  width: 93%;
+  margin: 60px auto 0;
+  height: 51.9vw;
+}
+
+.Banner {
+  width: 80vw;
+
+  margin: 15px auto 80px;
+}
+.bannerTitle {
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px;
+  margin: 5px auto;
+  white-space: pre;
+}
+
+.bannerContent {
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.bannerButton {
+  border-radius: 25px;
+  border: none;
+  color: #f7f7f7;
+  background: #111111;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.bannerButton:hover {
+  background-color: #777;
+}
+
+.ImageSlider {
+  width: 93%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+.sliderTitle {
+  padding-left: 50px;
+  float: left;
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.slider {
+  width: 100%;
+  height: 50vw;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.slide {
+  display: flex;
+  height: 33vw;
+  animation: slideshow 30s linear infinite;
+}
+.carouselImgs {
+  width: 25vw;
+  height: 50vw;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Images */
+.Images {
+  width: 93%;
+  height: 45vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.Images-img {
+  width: 50%;
+}
+/* slowslider */
+.slowContainer {
+  width: 93%;
+  margin: 0 auto;
+}
+.slowWrapper {
+  width: 100%;
+  height: 43vw;
+  display: block;
+}
+.imgFrame {
+  width: 49%;
+  padding: 0 0.4vw;
+  display: inline-block;
+}
+.slowImg {
+  height: 100%;
+  width: 100%;
+}
+
+/* 90% slide */
+.swiper-container {
+  width: 93%;
+  height: 40vw;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ninetyImg {
+  display: block;
+  width: 93vw;
+  height: 40vw;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px;
+  height: 20px;
+}
+/* FeaturedShoes */
+
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 10px;
+  color: black;
+  opacity: 0.3;
+  transition: 0.5s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+.items {
+  cursor: pointer;
+}
+
+.itemImg {
+  width: 30vw;
+  height: 30vw;
+}
+.itemImg img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.itemImg img:hover {
+  opacity: 0.6;
+}
+.itemBox {
+  text-align: left;
+  height: 10vw;
+  width: 30vw;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+.itemTitle {
+  margin: 5px 0;
+}
+.itemDesc {
+  font-size: 1vmax;
+}
+.itemPrice {
+  font-size: 0.8em;
+}
+.itemDesc,
+.itemPrice {
+  margin: 0;
+  color: #888;
+}
+/*///////////////////////// Footer */
+.Footer {
+  margin-top: 10vw;
+  background-color: #222;
+  font-size: 12px;
+  color: #999;
+  line-height: 2.5;
+}
+/*  customerService */
+.customerService {
+  padding: 20px;
+  margin: 0 auto;
+}
+.cus {
+  width: 20vw;
+}
+.custom-device {
+  display: none;
+}
+
+.csDiv {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+.custom-a {
+  color: #999;
+}
+.custom-a:hover {
+  color: #fff;
+}
+/*      company */
+
+.customTitle {
+  color: #fff;
+  font-size: 14px;
+}
+
+.company-content {
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  padding: 10px 2.5vw;
+  width: 35vw;
+}
+/* copyright */
+.copyright {
+  border-top: 1px #999 solid;
+  border-bottom: 1px #999 solid;
+  text-align: left;
+  padding: 10px 30px;
+}
+.copy-right {
+  float: right;
+}
+.copy-right span {
+  padding: 0 10px;
+}
+.footerWhite {
+  color: #fff;
+}
+.noChange {
+  color: #999;
+}
+/* media query for front page */
+@media screen and (max-width: 640px) {
+  .Banner {
+    text-align: left;
+    padding: 0;
+    margin: 30px auto 40px;
+  }
+  .bannerTitle {
+    font-size: 27px;
+    padding: 0;
+  }
+  .bannerContent {
+    padding: 0;
+  }
+  .bannerButton {
+    font-size: 14px;
+  }
+  /* imageSlider media query */
+  .ImageSlider div {
+    height: 110vw;
+  }
+  .slide img {
+    width: 55vw;
+    height: 110vw;
+  }
+  .slide {
+    animation: slideshow 34s infinite;
+  }
+  /* images and slowSlider */
+  .Images {
+    height: 70vw;
+  }
+  .img-disap {
+    display: none;
+  }
+  .Images-img {
+    width: 100%;
+  }
+  .get-bigger {
+    width: 100%;
+    height: 100%;
+  }
+  .test {
+    height: 93vw;
+  }
+  .slowImg {
+    height: 90%;
+  }
+  .slowWrapper {
+    height: auto;
+  }
+  /*//////////// footer */
+  .customer2,
+  .customer3,
+  .customer4 {
+    display: none;
+  }
+  .copy-right {
+    display: block;
+    float: none;
+  }
+  .copyright {
+    text-align: center;
+    height: 60px;
+  }
+  .change-line {
+    display: none;
+  }
+  .change-line::after {
+    display: block;
+  }
+  .company-content {
+    display: block;
+    width: 93vw;
+  }
+  .custom-desktop {
+    display: none;
+  }
+  .customer1 {
+    width: 300px;
+  }
+  .custom-device,
+  .customUl {
+    display: inline;
+  }
+  .horisontal {
+    float: left;
+    padding: 0 20px;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  visibility: hidden;
+}
